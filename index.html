@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Auto Instrucional - Fundamentos Teóricos da Computação</title>
+
+		<!-- Css -->
+		<link rel="stylesheet" type="text/css" href="lib/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="lib/css/bootstrap-grid.min.css">
+		<link rel="stylesheet" type="text/css" href="lib/css/bootstrap-reboot.min.css">
+		<link rel="stylesheet" type="text/css" href="index.css">
+		<!-- /Css -->
+	</head>
+	<body onload="onLoad();">
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<a class="navbar-brand" href="#"><b>FTC - Automatos</b></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="index.html">Página Inicial<span class="sr-only">(current)</span></a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+		<div class="jumbotron jumbotron-fluid">
+			<div class="container">
+				<h1 class="display-3 text-center"><b>Autoinstrucional</b></h1>
+				<h2 class="display-4 text-center"><b>Fundamentos Teóricos da Computação</b></h2>
+				<h2 class="display-4 text-center">AFN para AFD: Linguagem Formal</h2>
+
+				<div class="text-center">
+					<div class="input-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="spanFileInput">Upload</span>
+						</div>
+						<div class="custom-file">
+							<button onclick="document.getElementById('textFileInput').click();" class="custom-file-input"></button>
+							<input type="file" id="textFileInput" style="display: none;">
+							<label class="custom-file-label" id="labelFileInput" for="textFileInput">Escolha um Arquivo</label>
+						</div>
+					</div>
+
+					<fieldset class="scheduler-border">
+						<legend class="scheduler-border">Conteúdo do Arquivo de Entrada</legend>
+						<div class="form-group">
+							<textarea class="form-control rounded-0" id="textFileInputArea" rows="10" disabled></textarea>
+						</div>
+						<button id="buttonGenerateAutomata" type="button" class="btn btn-success" onclick="generateAutomata();" disabled="true">Gerar Autômato</button>
+					</fieldset>
+
+					<fieldset class="scheduler-border">
+						<legend class="scheduler-border">Conteúdo do Arquivo de Saída</legend>
+						<div class="form-group">
+							<textarea class="form-control rounded-0" id="textFileOutputArea" rows="10" disabled></textarea>
+						</div>
+						<button id="buttonDownloadAutomataFile" type="button" class="btn btn-success" onclick="downloadAutomata();" disabled="true">Baixar Arquivo do Autômato</button>
+					</fieldset>
+				</div>
+
+				<h3>Autômato: </h3>
+				<div class="code" style="height: 512px;">
+					<pre id="repl_results"></pre>
+					<br class="clear">
+				</div>
+
+				<hr>
+				<h2 class="display-4 text-center">Expressão Regular para AF</h2>
+				<h3>Expressão Regular: </h3>
+				<div class="code" style="height: 128px;">
+					<textarea id="repl_source" spellcheck="false"></textarea>
+					<br class="clear">
+				</div>
+				<div class="text-center div-links">
+					<ul class="list-inline">
+						<li class="list-inline-item"><button type="button" class="btn btn-primary" id="compile-dot" role="button"><b>Gerar Código DotScript</b></button></li>
+						<li class="list-inline-item"><button type="button" class="btn btn-primary" id="compile-nfa" role="button"><b>Gerar Autômato Finito Não-determinístico (AFNε)</b></button></li>
+						<li class="list-inline-item"><button type="button" class="btn btn-primary" id="compile-dfa" role="button"><b>Gerar Autômato Finito Determinístico (AFD)</b></button></li>
+					</ul>
+				</div>
+
+				<h5>Tutorial: </h5>
+				<p>Suporte para uso com as seguintes expressões regulares: </p>
+				<ul class="list-group">
+					<li class="list-group-item">+: Um ou mais</li>
+					<li class="list-group-item">*: Zero ou mais</li>
+					<li class="list-group-item">?: Zero ou um</li>
+					<li class="list-group-item">(): Capturar tudo dentro</li>
+					<li class="list-group-item">|: Ou</li>
+					<li class="list-group-item">\n: Nova linha</li>
+					<li class="list-group-item">\r: Carriage return (código de fim de linha)</li>
+					<li class="list-group-item">\t: Tab (espaçamento)</li>
+					<li class="list-group-item">\w: [a-zA-Z0-9_]</li>
+					<li class="list-group-item">\d: [0-9]</li>
+				</ul>
+			</div>
+		</div>
+
+		<footer class="footer mt-auto py-3 bg-dark">
+			<div class="container text-center">
+				<span class="text-muted">© 2019 Eduardo Augusto Lima Pereira. Todos os Direitos Reservados.</span>
+			</div>
+		</footer>
+	
+		<!-- Javascript -->
+		<script type="text/javascript" src="lib/js/jquery-3.3.0.min.js" charset="UTF-8"></script>
+		<script type="text/javascript" src="lib/js/bootstrap.min.js" charset="UTF-8"></script>
+		<script type="text/javascript" src="lib/js/bootstrap.bundle.min.js" charset="UTF-8"></script>
+		<script type="text/javascript" src="lib/js/regparser-browser.js" charset="UTF-8"></script>
+		<script type="text/javascript" src="lib/js/viz.js" charset="UTF-8"></script>
+		<script type="text/javascript" src="index.js" charset="UTF-8"></script>
+		<!-- /Javascript -->
+	</body>
+</html>

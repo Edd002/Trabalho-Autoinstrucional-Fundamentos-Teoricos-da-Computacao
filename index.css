@@ -1,0 +1,125 @@
+.class-form-data {
+	margin-top: 50px !important;
+	margin-bottom: 50px !important;
+}
+
+.div-links {
+	font-size: 18px !important;
+	margin-top: 60px !important;
+	margin-bottom: 30px !important;
+}
+
+.jumbotron-fluid {
+	margin-bottom: 0 !important;
+}
+
+.input-group {
+	margin-top: 65px !important;
+	margin-bottom: 65px !important;
+}
+
+.btn-primary {
+	margin-top: 10px !important;
+	margin-bottom: 10px !important;
+}
+
+hr {
+	margin-top: 50px !important;
+	margin-bottom: 50px !important;
+}
+
+fieldset.scheduler-border {
+    border: 1px groove #ddd !important;
+    padding: 0 1.4em 1.4em 1.4em !important;
+    margin: 0 0 1.5em 0 !important;
+    -webkit-box-shadow:  0px 0px 0px 0px #000;
+            box-shadow:  0px 0px 0px 0px #000;
+}
+
+legend.scheduler-border {
+    font-size: 1.2em !important;
+    font-weight: bold !important;
+    text-align: left !important;
+	width: auto !important;
+}
+
+a {
+	color: #191933;
+}
+
+br.clear {
+	height: 0;
+	clear: both;
+}
+
+code, pre, textarea {
+	font-family: Monaco, Consolas, "Lucida Console", monospace;
+	font-size: 12px;
+	line-height: 10px;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+	height: 1px;
+}
+
+pre {
+	border-left: 5px solid rgba(0,0,0,0.2);
+	padding: 3px 0 3px 12px;
+	font-size: 12px;
+}
+
+div.code {
+	position: relative;
+	background: #fff;
+	border: 1px solid #d8d8d8;
+	-webkit-box-shadow: 0px 0px 4px rgba(0,0,0,0.23);
+	-moz-box-shadow: 0px 0px 4px rgba(0,0,0,0.23);
+	box-shadow: 0px 0px 4px rgba(0,0,0,0.23);
+	zoom: 1;
+}
+
+div.code .minibutton {
+	text-transform: none;
+	position: absolute;
+	right: 8px;
+	bottom: 8px;
+}
+
+div.code .load {
+	left: 8px; right: auto;
+}
+
+div.code pre, div.code textarea {
+	float: left;
+	width: 450px;
+	background: #fff;
+	border-left: none;
+	margin: 0;
+	padding: 0;
+}
+
+#repl_source, #repl_results, #repl_results2, #repl_source2 {
+	background: transparent;
+	outline: none;
+	margin: 5px 0 20px;
+}
+
+#repl_results, #repl_source_wrap, #repl_results2 {
+	width: auto;
+	height: auto;
+	position: absolute;
+	margin-bottom: 0;
+	top: 10px; left: 10px; right: 10px; bottom: 15px;
+}
+
+#repl_results.error, #repl_results2.error {
+	color: red
+}
+
+#repl_source, #repl_source2{
+	padding-left: 5px;
+	width: 100%;
+	height: 100%;
+	border: 0;
+	overflow-y: auto;
+	resize: none;
+}
